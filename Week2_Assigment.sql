@@ -155,7 +155,6 @@ join inventory as i on i.inventory_id= rental.inventory_id;
 select customer.first_name, customer.last_name from customer join rental on rental.customer_id=customer.customer_id
 join inventory as i on i.inventory_id= rental.inventory_id
 where i.store_id in(1,2)
-group by customer.customer_id
-having count(i.store_id)=2;
+group by customer.customer_id;
 
 
